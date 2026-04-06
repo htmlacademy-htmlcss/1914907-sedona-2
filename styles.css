@@ -28,7 +28,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: #000;
+  color: #000000;
   background-color: #f2f2f2;
 }
 
@@ -36,9 +36,21 @@ body {
   flex-grow: 1;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
+/* visually-hidden */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* header */
 
@@ -49,11 +61,19 @@ body {
   padding: 20px 70px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
+}
+
+.header-logo-link {
+  display: block;
+  width: 140px;
+  height: 70px;
 }
 
 .header-logo-img {
   display: block;
+  width: 140px;
+  height: 70px;
 }
 
 .navigation {
@@ -64,15 +84,18 @@ body {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-link {
+  display: block;
+  padding: 10px 0;
   text-decoration: none;
-  color: #000;
+  color: #000000;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -80,17 +103,20 @@ body {
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
-  list-style: none;
+  margin: 0;
   margin-left: auto;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-button {
+  display: block;
   padding: 10px 20px;
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-size: 16px;
@@ -100,6 +126,8 @@ body {
 /* welcome */
 
 .welcome {
+  padding-top: 50px;
+  padding-bottom: 80px;
   text-align: center;
   background-image: url("../images/index/index-background.jpg");
   background-size: cover;
@@ -108,22 +136,24 @@ body {
 
 .main-logo-img {
   display: block;
+  width: 457px;
+  height: 213px;
   margin: 0 auto 30px;
 }
 
 .welcome-title {
+  margin: 0 0 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 20px;
 }
 
 .welcome-text {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
-  color: #333;
-  margin: 0;
+  color: #333333;
 }
 
 /* advantages */
@@ -138,7 +168,9 @@ body {
 }
 
 .advantages-block img {
+  display: block;
   width: 50%;
+  height: 385px;
   object-fit: cover;
 }
 
@@ -150,7 +182,7 @@ body {
   justify-content: center;
   text-align: center;
   background-color: #82b3d3;
-  color: #fff;
+  color: #ffffff;
 }
 
 .advantages-block-reverse {
@@ -158,11 +190,11 @@ body {
 }
 
 .advantages-title {
+  margin: 0 0 20px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 20px;
 }
 
 .advantages-text {
@@ -171,9 +203,10 @@ body {
 
 .advantages-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .advantages-item {
@@ -189,43 +222,49 @@ body {
 }
 
 .advantages-item img {
-  margin-bottom: 30px;
+  display: block;
+  width: 75px;
+  height: 72px;
+  margin: 0 auto 30px;
 }
 
 /* welcome block */
 
 .welcome-item {
-  text-align: center;
   padding: 60px 20px;
+  text-align: center;
 }
 
 /* search */
 
 .hotel-search {
-  text-align: center;
   padding: 80px 20px;
+  text-align: center;
 }
 
 .hotel-search button {
+  display: inline-block;
   padding: 15px 40px;
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 700;
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 /* subscribe */
 
 .subscribe {
-  text-align: center;
   padding: 80px 20px;
+  text-align: center;
   background-image: url("../images/index/subscribe.jpg");
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 .subscribe-item {
@@ -239,12 +278,14 @@ body {
   padding: 15px;
   border: none;
   font-size: 18px;
+  font-family: inherit;
 }
 
 .subscribe-item a {
+  display: block;
   padding: 15px 30px;
   background-color: #82b3d3;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
@@ -254,30 +295,50 @@ body {
 
 .page-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 40px 70px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  width: 24px;
+  height: 17px;
+}
+
+.footer-contact {
+  padding: 10px 0;
 }
 
 .footer-contact-item {
+  display: block;
   font-size: 40px;
-  color: #000;
+  color: #000000;
   text-decoration: none;
+}
+
+.footer-logo-link {
+  display: block;
+  width: 115px;
+  height: 33px;
 }
 
 .footer-logo-img {
   display: block;
+  width: 115px;
+  height: 33px;
 }
 
 /* catalog */
@@ -302,7 +363,14 @@ body {
   z-index: 1;
 }
 
-.catalog-filter > * {
+.catalog-filter > img,
+.catalog-filter > h1,
+.catalog-filter > nav,
+.catalog-filter > div,
+.catalog-filter > .first-filter-list,
+.catalog-filter > .second-filter-list,
+.catalog-filter > .hotel-price,
+.catalog-filter > .catalog-filter-button {
   position: relative;
   z-index: 2;
 }
@@ -312,10 +380,10 @@ body {
 }
 
 .main-title {
+  margin: 0 0 10px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  margin: 0 0 10px;
   color: #ffffff;
 }
 
@@ -325,18 +393,19 @@ body {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  list-style: none;
+  gap: 10px;
   margin: 0;
   padding: 0;
-  gap: 10px;
+  list-style-type: none;
 }
 
 .breadcrumbs-item a {
-  color: #ffffff;
-  text-decoration: none;
   display: flex;
   align-items: center;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .breadcrumbs-item a:hover {
@@ -356,34 +425,34 @@ body {
 }
 
 .filter-title {
+  margin: 0 0 30px;
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 30px;
   color: #ffffff;
 }
 
 .filter-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .filter-list input[type="checkbox"],
 .filter-list input[type="radio"] {
-  margin-right: 10px;
-  margin-bottom: 15px;
   width: 20px;
   height: 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 
 .filter-list label {
   display: inline-block;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 23px;
-  margin-bottom: 15px;
-  cursor: pointer;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .hotel-price {
@@ -418,9 +487,9 @@ body {
 
 .hotel-price input[type="range"] {
   display: block;
-  margin-top: 20px;
   width: 100%;
   height: 4px;
+  margin-top: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
 }
@@ -429,9 +498,9 @@ body {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
+  border: none;
   border-radius: 50%;
   cursor: pointer;
-  border: none;
 }
 
 .catalog-filter-button {
@@ -445,14 +514,14 @@ body {
   display: inline-block;
   padding: 12px 34px;
   margin-right: 15px;
-  text-decoration: none;
+  border: none;
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 4px;
   font-family: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
   cursor: pointer;
-  border: none;
 }
 
 .apply_button {
@@ -481,35 +550,37 @@ body {
 
 .search-line {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 40px;
+  gap: 20px;
 }
 
 .search-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  list-style: none;
+  gap: 40px;
   margin: 0;
   padding: 0;
-  gap: 40px;
-  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .search-item h2 {
+  margin: 0;
   font-size: 30px;
   font-weight: 700;
-  margin: 0;
   color: #000000;
 }
 
 .search-item select {
   padding: 10px 40px 10px 15px;
   font-size: 18px;
+  font-family: inherit;
+  background-color: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  background-color: #ffffff;
-  font-family: inherit;
   cursor: pointer;
   appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23333333" d="M6 8L0 0h12z"/></svg>');
@@ -519,10 +590,11 @@ body {
 
 .search-view {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  gap: 10px;
   margin: 0;
   padding: 0;
-  gap: 10px;
+  list-style-type: none;
 }
 
 .search-view-item a {
@@ -531,9 +603,9 @@ body {
   justify-content: center;
   width: 48px;
   height: 48px;
+  text-decoration: none;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  text-decoration: none;
 }
 
 .search-view-item a:hover {
@@ -552,42 +624,42 @@ body {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   width: calc(25% - 15px);
   min-width: 260px;
   padding: 20px;
+  box-sizing: border-box;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
 .product-card img {
   width: 100%;
   height: 212px;
-  object-fit: cover;
   margin-bottom: 15px;
+  object-fit: cover;
   border-radius: 4px;
 }
 
 .product-title {
+  margin: 0 0 10px;
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 10px;
   color: #000000;
 }
 
 .product-text {
+  margin: 0;
   font-size: 18px;
   color: #333333;
-  margin: 0;
 }
 
 .price {
+  margin: 0;
   font-size: 18px;
   font-weight: 700;
   text-align: right;
-  margin: 0;
   color: #333333;
 }
 
@@ -601,37 +673,37 @@ body {
 .product-card button {
   width: 48%;
   padding: 8px 0;
+  margin-bottom: 15px;
   border: none;
-  border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
   font-family: inherit;
-  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .product-card button:first-of-type {
+  margin-right: 4%;
   background-color: #756157;
   color: #ffffff;
-  margin-right: 4%;
 }
 
 .product-card img[alt="Рейтинг"] {
+  display: inline-block;
   width: 18px;
   height: 17px;
-  display: inline-block;
   margin-right: 2px;
   margin-bottom: 0;
 }
 
 .rating {
   display: inline-block;
+  margin: 0;
   padding: 8px 15px;
+  font-size: 16px;
   background-color: #f2f2f2;
   border-radius: 4px;
-  font-size: 16px;
-  margin: 0;
   color: #333333;
 }
 
@@ -641,11 +713,11 @@ body {
 
 .pagination-list {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 0;
   padding: 0;
-  gap: 8px;
-  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .pagination-item a {
@@ -655,12 +727,12 @@ body {
   min-width: 50px;
   height: 50px;
   padding: 0 12px;
-  background-color: #82B3D3;
+  font-size: 20px;
+  font-weight: 700;
   color: #ffffff;
   text-decoration: none;
+  background-color: #82B3D3;
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 20px;
 }
 
 .pagination-item a:hover {
@@ -673,6 +745,7 @@ body {
   pointer-events: none;
 }
 
+/* catalog subscribe */
 .subscribe {
   text-align: center;
   background-color: #ffffff;
@@ -680,23 +753,21 @@ body {
 }
 
 .subscribe .welcome-title {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
-  margin-bottom: 20px;
 }
 
 .subscribe .welcome-text {
+  max-width: 600px;
+  margin: 0 auto 40px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .subscribe-item {
@@ -709,10 +780,10 @@ body {
 .subscribe-item input {
   flex: 1;
   padding: 15px 20px;
-  font-size: 18px;
   border: none;
-  background-color: #f2f2f2;
+  font-size: 18px;
   font-family: inherit;
+  background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
 }
 
@@ -722,17 +793,18 @@ body {
 }
 
 .subscribe-item a {
-  display: inline-block;
+  display: block;
   padding: 15px 30px;
-  background-color: #82B3D3;
-  color: #ffffff;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   line-height: 24px;
-  text-transform: uppercase;
+  font-family: inherit;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 0 4px 4px 0;
+  text-transform: uppercase;
   white-space: nowrap;
+  background-color: #82B3D3;
+  border-radius: 0 4px 4px 0;
 }
 
 .subscribe-item a:hover {
