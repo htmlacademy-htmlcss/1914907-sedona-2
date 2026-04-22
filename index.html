@@ -41,7 +41,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-button" href="form.html">Хочу сюда!</a>
+              <a class="navigation-button">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -179,6 +179,79 @@
             <button class="subscribe-button" type="submit">Подписаться</button>
           </form>
         </div>
+
+        <div class="modal-overlay modal-overlay-hidden">
+          <div class="modal">
+            <button class="modal-close-button" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+              <!-- Дата заезда -->
+              <div class="modal-field">
+                <div class="modal-field-row">
+                  <label class="modal-label" for="arrival-date">Дата Заезда:</label>
+                  <div class="modal-input-wrapper">
+                    <input class="modal-input" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020">
+                    <span class="modal-input-icon calendar-icon"></span>
+                  </div>
+                </div>
+                <div class="modal-message modal-message-error">Мы не можем отправить вас в прошлое.</div>
+              </div>
+
+              <!-- Дата выезда -->
+              <div class="modal-field">
+                <div class="modal-field-row">
+                  <label class="modal-label" for="departure-date">Дата Выезда:</label>
+                  <div class="modal-input-wrapper">
+                    <input class="modal-input" type="text" id="departure-date" name="departure-date"
+                      value="1 сентября 2023">
+                    <span class="modal-input-icon calendar-icon"></span>
+                  </div>
+                </div>
+                <div class="modal-message modal-message-success">На эти даты есть свободные номера. Пока есть.</div>
+              </div>
+
+              <!-- Взрослые и дети -->
+              <div class="modal-row">
+                <!-- Взрослые -->
+                <div class="modal-counter-field">
+                  <div class="modal-counter-row">
+                    <label class="modal-counter-label" for="adults">Взрослые:</label>
+                    <div class="modal-counter">
+                      <button class="modal-counter-btn modal-counter-minus" type="button">—</button>
+                      <input class="modal-counter-input" type="text" id="adults" name="adults" value="2">
+                      <button class="modal-counter-btn modal-counter-plus" type="button">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Дети -->
+                <div class="modal-counter-field">
+                  <div class="modal-counter-row">
+                    <div class="modal-counter-label-wrapper">
+                      <label class="modal-counter-label" for="children">Дети:</label>
+                      <div class="modal-tooltip">
+                        <button class="modal-tooltip-btn" type="button">i</button>
+                        <div class="modal-tooltip-text">
+                          Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                          размещаются бесплатно.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-counter">
+                      <button class="modal-counter-btn modal-counter-minus" type="button">—</button>
+                      <input class="modal-counter-input" type="text" id="children" name="children" value="2">
+                      <button class="modal-counter-btn modal-counter-plus" type="button">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="modal-submit-btn" type="button">Найти</button>
+            </form>
+          </div>
+        </div>
       </main>
 
       <footer class="page-footer">
@@ -212,6 +285,27 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      const modal = document.querySelector('.modal-overlay');
+      const openBtn = document.querySelector('.hotel-search-button');
+      const closeBtn = document.querySelector('.modal-close-button');
+
+      openBtn.addEventListener('click', () => {
+        modal.classList.remove('modal-overlay-hidden');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('modal-overlay-hidden');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('modal-overlay-hidden');
+        }
+      });
+    </script>
+
   </body>
 
 </html>
