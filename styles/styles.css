@@ -348,8 +348,9 @@
 .advantages-block {
   display: grid;
   grid-template-columns: 400px 800px;
+  margin-bottom: -5px;
   box-sizing: border-box;
-  height: 382px;
+  min-height: 382px;
 }
 
 .advantages-block img {
@@ -1863,22 +1864,22 @@
 
 .filter-checkbox:hover + .filter-label::before {
   outline: none;
-  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #756157;
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #82b3d3;
 }
 
 .filter-radio:hover + .filter-label::before {
   outline: none;
-  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #756157;
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #82b3d3;
 }
 
 .price-input:hover {
   outline: none;
-  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #756157;
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #82b3d3;
   border-radius: 4px;
 }
 
 .price-slider-min:hover,
 .price-slider-max:hover {
   outline: none;
-  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #756157;
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #82b3d3;
 }
