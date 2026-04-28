@@ -1881,5 +1881,16 @@
 .price-slider-min:hover,
 .price-slider-max:hover {
   outline: none;
-  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #82b3d3;
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #f49426;
+}
+
+.filter-radio:focus + .filter-label:before{
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #f49426;
+}
+.filter-checkbox:focus + .filter-label:before{
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #f49426;
+}
+.price-slider-min:focus,
+.price-slider-max:focus {
+  box-shadow: 0 0 0 3px #000000, 0 0 0 6px #f49426;
 }
